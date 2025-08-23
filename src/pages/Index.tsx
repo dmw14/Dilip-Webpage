@@ -83,7 +83,8 @@ const Index = () => {
             <div className="space-y-3">
               <h4 className="font-semibold text-foreground text-lg">Office Address</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Block no 226, Azad Road, 8th Lane,<br />
+                Block no 226,<br />
+                Azad Road, 8th Lane,<br />
                 Near Bharat Bank,<br />
                 Jaysingpur-416101,<br />
                 Kolhapur, Maharashtra
