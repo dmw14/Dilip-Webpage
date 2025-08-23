@@ -95,7 +95,7 @@ const Index = () => {
       
       <footer className="bg-gradient-primary border-t border-border mt-16">
         <div className="max-w-4xl mx-auto px-4 py-6 text-center">
-          <p className="text-sm text-white">© 2024 Dilip Products. All rights reserved.</p>
+          <p className="text-sm text-white">© 2025 Dilip Products. All rights reserved.</p>
         </div>
       </footer>
     </div>
