@@ -37,26 +37,6 @@ const About = () => {
           </div>
         </ScrollReveal>
 
-        {/* Timeline */}
-        <ScrollReveal>
-          <h2 className="text-2xl font-bold text-foreground text-center mb-8">Our Journey</h2>
-          <div className="space-y-6 max-w-lg mx-auto">
-            {milestones.map((m, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="flex gap-4 items-start">
-                  <div className="flex flex-col items-center">
-                    <div className="w-3 h-3 rounded-full bg-primary shrink-0 mt-1.5" />
-                    {i < milestones.length - 1 && <div className="w-0.5 h-full bg-border mt-1" />}
-                  </div>
-                  <div className="pb-6">
-                    <span className="text-sm font-bold text-primary">{m.year}</span>
-                    <p className="text-muted-foreground text-sm mt-1">{m.text}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </ScrollReveal>
 
         {/* Values */}
         <ScrollReveal>
