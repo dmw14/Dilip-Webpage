@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3">Contact</h4>
             <div className="space-y-2 text-sm opacity-70">
-              <p>ingale.industries@gmail.com</p>
+              <p>ramesh.ingale22@gmail.com</p>
               <p>+91 9764976638</p>
               <p>Jaysingpur, Kolhapur, Maharashtra</p>
             </div>
