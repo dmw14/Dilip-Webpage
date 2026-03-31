@@ -1,135 +1,78 @@
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
+import HeroBanner from "@/components/HeroBanner";
 import ProductCard from "@/components/ProductCard";
+import ScrollReveal from "@/components/ScrollReveal";
+import { products } from "@/data/products";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
-  const products = [
-    {
-      name: "Dilip Mitha",
-      price: 1,
-      image: "/lovable-uploads/472d356e-1ab0-4946-94fa-f91c773d2af4.png",
-      description: "Premium sweet mouth freshener blend",
-      ingredients:
-        "Sounf, dhanadal, menthol, cardamom, sodium saccharine, permitted flavours - no added sugar.",
-      isNew: true,
-    },
-    {
-      name: "Dilip Dhana Dal",
-      price: 1,
-      image: "/lovable-uploads/e2b08bf7-dfb1-42a1-8439-a0854955564a.png",
-      description: "Roasted dhana dal for healthy snacking",
-      ingredients: "Coriander seeds, salt.",
-    },
-    {
-      name: "Dilip Supari",
-      price: 7,
-      image: "/lovable-uploads/caecafa4-cb14-408b-8c35-09cc356a4e94.png",
-      description: "Traditional supari for after meals",
-      ingredients: "Raw crushed supari.",
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <Layout>
+      <HeroBanner />
 
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Products Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-business-primary mb-3">
-            Our Products
-          </h2>
-          <p className="text-business-accent font-medium">
-            Traditional quality products at affordable prices
-          </p>
-        </div>
+      {/* Products Section */}
+      <section id="products" className="max-w-6xl mx-auto px-4 py-16">
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Our Products</h2>
+            <p className="text-muted-foreground max-w-md mx-auto">
+              Traditional quality products at affordable prices — trusted for over 60 years.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-              description={product.description}
-              ingredients={product.ingredients}
-              isNew={product.isNew}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {products.map((product, i) => (
+            <ScrollReveal key={product.id} delay={i * 0.1}>
+              <ProductCard product={product} />
+            </ScrollReveal>
           ))}
         </div>
+      </section>
 
-        {/* About Section */}
-        <div className="text-center mt-16 p-10 bg-gradient-subtle rounded-2xl border-2 border-business-primary/10 shadow-elegant">
-          <h3 className="text-2xl font-bold text-business-primary mb-4">
-            About Dilip Industries
-          </h3>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Established in{" "}
-            <span className="text-business-accent font-semibold">
-              1964
-            </span>
-            , Dilip Industries is a family business committed to providing
-            traditional, high-quality products at affordable prices. Our
-            products are made with care and attention to maintain authentic taste
-            and freshness for over 60 years.
-          </p>
-        </div>
-
-        {/* Contact Section */}
-        <div className="mt-12 p-10 bg-card rounded-2xl border border-border shadow-elegant">
-          <h3 className="text-2xl font-bold text-business-primary mb-6 text-center">
-            Contact Information
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h4 className="font-semibold text-business-accent text-lg">
-                Contact Details:
-              </h4>
-              <div className="space-y-2 text-sm">
-                <p className="text-muted-foreground">
-                  <span className="font-medium text-foreground">Email:</span>{" "}
-                  ramesh.ingale22@gmail.com
-                </p>
-                <p className="text-muted-foreground">
-                  <span className="font-medium text-foreground">Telephone:</span>{" "}
-                  02322225396
-                </p>
-                <p className="text-muted-foreground">
-                  <span className="font-medium text-foreground">Mobile:</span>{" "}
-                  +91 9764976638
-                </p>
-                <p className="text-muted-foreground">
-                  <span className="font-medium text-foreground">Mobile:</span>{" "}
-                  +91 9225828684
-                </p>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-semibold text-business-accent text-lg">
-                Office Address:
-              </h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Block no 226, Azad Road, 8th Lane,
-                <br />
-                Near Bharat Bank,
-                <br />
-                Jaysingpur-416101,
-                <br />
-                Kolhapur, Maharashtra
+      {/* About Preview */}
+      <section className="bg-secondary">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <ScrollReveal>
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-foreground mb-4">About Dilip Industries</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Founded by Mr. Raychand Ingale in 1964 in Jaysingpur, Dilip Industries has been
+                committed to providing traditional, high-quality products at affordable prices
+                for over 60 years.
               </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+              >
+                Read our full story <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
-      </main>
+      </section>
 
-      {/* Footer */}
-      <footer className="bg-gradient-primary border-t border-border mt-16">
-        <div className="max-w-4xl mx-auto px-4 py-6 text-center">
-          <p className="text-sm text-white">
-            © 2026 Dilip Products. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+      {/* Contact CTA */}
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <ScrollReveal>
+          <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+              Get in Touch
+            </h2>
+            <p className="text-primary-foreground/70 mb-6 max-w-md mx-auto">
+              Interested in our products? Reach out to us for bulk orders or inquiries.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </ScrollReveal>
+      </section>
+    </Layout>
   );
 };
 
