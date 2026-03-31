@@ -55,7 +55,7 @@ export const products: Product[] = [
     slug: "dilip-supari",
     price: 7,
     image: "/lovable-uploads/caecafa4-cb14-408b-8c35-09cc356a4e94.png",
-    description: "Traditional raw crushed supari — a classic after-meal digestive.",
+    description: "Traditional raw crushed supari",
     ingredients: "Raw Crushed Supari",
     details: [
       "Traditional Recipe",

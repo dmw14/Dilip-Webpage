@@ -1,13 +1,6 @@
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const milestones = [
-  { year: "1964", text: "Dilip Industries founded by Mr. Raychand Ingale in Jaysingpur" },
-  { year: "1970s", text: "Dilip Supari and Dhana Dal become household names in the region" },
-  { year: "2000s", text: "Expanded distribution across Kolhapur district" },
-  { year: "2024", text: "Launched Dilip Mitha — a new premium mouth freshener" },
-];
-
 const About = () => {
   return (
     <Layout>
